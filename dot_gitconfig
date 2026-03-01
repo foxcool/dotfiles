@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Alexander Babenko
+	email = mail@darkfox.info
+[push]
+        default = simple
+[pull]
+        rebase = false
+[color]
+        ui = true
+[core]
+        quotepath = false
+    pager = delta
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+[interactive]
+    diffFilter = delta --color-only
+[url "git@bitbucket.org:"]
+    insteadOf = https://bitbucket.org/
