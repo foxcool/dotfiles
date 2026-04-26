@@ -19,3 +19,5 @@
     diffFilter = delta --color-only
 [url "git@bitbucket.org:"]
     insteadOf = https://bitbucket.org/
+[gpg]
+	program = gpg
