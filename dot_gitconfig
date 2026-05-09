@@ -2,6 +2,7 @@
 [user]
 	name = Alexander Babenko
 	email = mail@darkfox.info
+	signingkey = 14F14001AC3C1E43
 [push]
         default = simple
 [pull]
@@ -21,3 +22,6 @@
     insteadOf = https://bitbucket.org/
 [gpg]
 	program = gpg
+	format = openpgp
+[commit]
+	gpgsign = true
