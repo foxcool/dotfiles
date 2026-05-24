@@ -10,17 +10,20 @@ vim.opt.linebreak = true
 vim.opt.relativenumber = false
 vim.opt.number = true
 
+-- Link unnamed register to system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- Use OSC 52 clipboard over SSH (no system clipboard available on headless servers)
 if vim.env.SSH_TTY ~= nil then
   vim.g.clipboard = {
-    name = 'OSC 52',
+    name = "OSC 52",
     copy = {
-      ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-      ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+      ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
     },
     paste = {
-      ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-      ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+      ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
     },
   }
 end
